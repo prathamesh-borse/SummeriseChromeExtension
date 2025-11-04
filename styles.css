@@ -1,0 +1,105 @@
+/* Summarize button */
+.lisum-btn {
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    background: #1e40af;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 10px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 600;
+    backdrop-filter: blur(8px);
+    transition: background 0.2s ease;
+}
+
+.lisum-btn:hover {
+    background: #191919;
+}
+
+/* Panel appearance */
+.lisum-panel {
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    background: linear-gradient(135deg, rgba(239, 246, 255, 0.9), rgba(245, 243, 255, 0.9));
+    border-radius: 14px;
+    padding: 10px 12px;
+    margin: 10px 0;
+    color: #334155;
+    box-shadow: 0 10px 30px rgba(2, 8, 23, 0.06);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.lisum-row {
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.lisum-spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid #93c5fd;
+    border-top-color: transparent;
+    border-radius: 9999px;
+    display: inline-block;
+    animation: lisum-spin 1s linear infinite;
+}
+
+@keyframes lisum-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.lisum-success {
+    color: #16a34a;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.lisum-error {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.lisum-summary {
+    margin-top: 6px;
+    padding: 10px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #eff6ff, #faf5ff);
+}
+
+.lisum-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.lisum-secondary {
+    background: white;
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+    color: #4f46e5;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.lisum-secondary:hover {
+    background: #f8fafc;
+}

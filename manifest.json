@@ -1,0 +1,36 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn One‑Line Summarizer",
+    "version": "1.0.0",
+    "description": "Adds a Summarize button to LinkedIn posts in your feed and shows a one‑line summary.",
+    "permissions": [
+        "storage",
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://www.linkedin.com/*",
+        "https://*.linkedin.com/*",
+        "https://linktldrbackend.onrender.com/*"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.linkedin.com/*"
+            ],
+            "js": [
+                "contentScript.js"
+            ],
+            "css": [
+                "styles.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "action": {
+        "default_title": "LinkedIn One‑Line Summarizer"
+    }
+}
